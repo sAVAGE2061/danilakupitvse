@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сюрприз для друга</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Общий стиль страницы */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            animation: bgAnimation 6s infinite alternate;
+        }
+
+        /* Анимация RGB-фона */
+        @keyframes bgAnimation {
+            0%   { background-color: rgb(0, 0, 0); }
+            25%  { background-color: rgb(0, 0, 255); }
+            50%  { background-color: rgb(0, 255, 0); }
+            75%  { background-color: rgb(255, 0, 0); }
+            100% { background-color: rgb(128, 0, 128); }
+        }
+
+        /* Оформление заголовка */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Анимация появления заголовка */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Контейнер для кнопок */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        /* Кнопка */
+        .btn {
+            font-size: 20px;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: bold;
+            width: 100%;
+            color: white;
+            animation: btnAnimation 12s infinite alternate;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Анимация плавного RGB-переливания кнопок */
+        @keyframes btnAnimation {
+            0%   { background-color: rgb(0, 0, 255); }
+            25%  { background-color: rgb(0, 255, 0); }
+            50%  { background-color: rgb(255, 0, 0); }
+            75%  { background-color: rgb(128, 0, 128); }
+            100% { background-color: rgb(0, 0, 255); }
+        }
+
+        /* Эффект при наведении */
+        .btn:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 18px;
+            }
+            .btn {
+                font-size: 18px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Получи максимально удовольствие от жизни</h1>
+
+    <div class="button-container">
+        <button class="btn" onclick="goToLink(0)">🎁 Купить для души</button>
+        <button class="btn" onclick="goToLink(1)">🎉 Купить для мужского Я</button>
+        <button class="btn" onclick="goToLink(2)">💥 Купить чисто кайфануть</button>
+        <button class="btn" onclick="goToLink(3)">🔥 Купить для любимой игры</button>
+        <button class="btn" onclick="goToLink(4)">✨ Купить для девушки
+		</button>
+    </div>
+
+    <script>
+        function goToLink(index) {
+            let links = [
+                "https://market.yandex.ru/product--videokarta-palit-geforce-rtx-5090-gamerock-32gb-ne75090019r5-gb2020g/1061788485?hid=90401&sku=103824982024&show-uid=17431052049291069660916003&from=search&cpa=1&do-waremd5=7VhssLZVfbUOLQw-hjnMHQ&cpc=fmUFjbqMH9DFXO9u5-B7LFSJpo3_OfTEUPkGOh-eMwEfXSptKaDg7aIvvVFui-SZI4EOglOvUBn8Q3S75NB_ZxNa_Yc1XRnBquJLPig2_P-hAqd7LiHkkOo-jofUJ9CsKInEeEYzw4drR170v-14VWGrnjaYXYGkqA9xQ6c2F3AUyd5TEFlFqr2qn4ou8a9-b1fN5lWdfVyEaIRmg3XGdsWURDLksLczPlmTXMC8TALJdJPn-FUiYUgacqWV6RGZlkLCEoRMjxyfoIHhknZ8wSEHJC1cFJAl9MC-mpE3_azZGWBD_w2gssLjosynfH_MMbGA928brk7HIYg0hCVeLs7rCHqdjodGqjHYH9AKvfAI_iVZxWRPo0UBOy6-uIbE2lR-PcSHo3jlrL-934z_dYTU0JaQdChzA1dM6wn2DT-wb0Mj8tCWMCqrS-c4R0i6QX7x5XVAtSidnCd7qFOsPg%2C%2C&cc=CgAQB4B95u0G&uniqueId=788934",  // Ссылка для первой кнопки
+                "https://configure.bmw.ru/ru_RU/configid/3cgm5pc8",  // Ссылка для второй кнопки
+                "https://www.avito.ru/belousovo/gruzoviki_i_spetstehnika/samolet_beechcraft_king_air_c90gti_3995344630?context=H4sIAAAAAAAA_wEmANn_YToxOntzOjE6IngiO3M6MTY6IkFveUQ0bDByT0kycTF4SjIiO31gSMXWJgAAAA",  // Ссылка для третьей кнопки
+                "https://funpay.com/lots/offer?id=34004150",  // Ссылка для четвёртой кнопки
+                "https://www.avito.ru/moskva/gotoviy_biznes/salon_krasoty_v_moskva-siti._luchshaya_lokatsiya_4826930433"   // Ссылка для пятой кнопки
+             ];
+        
+        // Открываем ссылку корректно для iPhone
+        let a = document.createElement("a");
+        a.href = links[index];
+        a.target = "_blank"; // Открывает в новой вкладке
+        a.click();
+    }
+</script>
+
+</body>
+</html>
